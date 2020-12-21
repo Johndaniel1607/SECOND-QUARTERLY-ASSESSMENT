@@ -23,6 +23,19 @@ namespace Daniel.SECOND_QUARTERLY_ASSESSMENT
         public MainWindow()
         {
             InitializeComponent();
+            var url = "http://newsapi.org/v2/top-headlines?country=fr&category=business&apiKey=4a977cc9d4b44c8289ee00ad6c6b8040" +
+                "country=fr&" +
+                "category=business" +
+                "apiKey=4a977cc9d4b44c8289ee00ad6c6b8040";
+
+            var json = new WebClient().Downloadstring(url);
+
+            Console.WriteLine(json);
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
